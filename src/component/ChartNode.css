@@ -1,0 +1,67 @@
+.orgchart ul {
+  display: flex;
+  padding-left: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.orgchart ul li {
+  display: inline-block;
+  position: relative;
+}
+
+.orgchart ul li .chart-node {
+  box-sizing: border-box;
+  display: inline-block;
+  position: relative;
+  padding: 3px;
+  margin-bottom: 40px;
+}
+
+/* Horizontal line */
+.orgchart > ul > li > ul li::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 100%;
+  border-top: 1px solid rgba(191, 191, 191, 0.4);
+  box-sizing: border-box;
+}
+
+.orgchart > ul > li > ul li:first-child::before {
+  left: calc(50%);
+  width: calc(50%);
+}
+
+.orgchart > ul > li > ul li:last-child::before {
+  width: calc(50%);
+}
+
+.orgchart > ul > li > ul li:only-child::before {
+  width: 1px;
+}
+
+/* Vertical line before */
+.orgchart > ul > li > ul li > .chart-node::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: calc(50%);
+  width: 1px;
+  height: 20px;
+  background-color: rgba(191, 191, 191, 0.4);
+}
+
+/* Vertical line after */
+.orgchart ul li .chart-node:not(:only-child)::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: calc(50%);
+  width: 1px;
+  height: 20px;
+  background-color: rgba(191, 191, 191, 0.4);
+}
+
+

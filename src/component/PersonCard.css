@@ -1,0 +1,38 @@
+.box {
+  display: flex;
+  align-items: center;
+  width: 200px;
+  height: 79px;
+  padding: 18px 10px;
+  margin: 0 20px;
+  box-sizing: border-box;
+  border-bottom: 2px solid rgba(227, 5, 19, 1);
+  box-shadow: 0px 0px 6px #E4E4E4;
+}
+.box:hover {
+  background-color: rgba(227, 5, 19, 0.07);
+}
+.box .image_box {
+  width: 44px;
+  height: 44px;
+  padding-right: 10px;
+}
+.image_box img {
+  width: 100%;
+}
+.box .person_name {
+  font: normal 700 14px Arial;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.box .position {
+  font: normal 400 12px Arial;
+  line-height: 14px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+/* style for allowedDrop */
+.box.allowedDrop {
+  border: 2px dashed rgba(218, 218, 218, 1);
+}
